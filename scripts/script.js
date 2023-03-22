@@ -26,16 +26,31 @@
 //     
 // }
 // while(isNaN(radius))
-let area = (radius=0) => {
-    return radius * radius * Math.PI;
-}
-radius = prompt("Enter the radius of a circle");
+// let area = (radius=0) => {
+//     return radius * radius * Math.PI;
+// }
+// radius = prompt("Enter the radius of a circle");
 
-const radiuspara = document.querySelector("#radius");
-const resultpara = document.querySelector("#result");
-radiuspara.textContent += radius;
-if (isNaN(radius)) {
-    result.textContent = "ERROR: Invalid radius";
+// const radiuspara = document.querySelector("#radius");
+// const resultpara = document.querySelector("#result");
+// radiuspara.textContent += radius;
+// if (isNaN(radius)) {
+//     result.textContent = "ERROR: Invalid radius";
+// }
+// else
+//     result.textContent = `The area of a circle with radius ${radius} is ${area(radius)}`;
+function addToShop(list){
+    //1. select and store a ref to the ul -> querySelector
+    //2. loop through the list -> for loop
+    //3. create an li -> createElement
+    //4. append the li to the ul -> parent.appendChild(child)
+    //5. update the textContent of the li with array item
+    const shoppingList = document.querySelector(".shopping");
+    for (let item of list) {
+        const newLi = document.createElement("li");  
+        shoppingList.appendChild(newLi);
+        newLi.textContent = item;
+    }   
 }
-else
-    result.textContent = `The area of a circle with radius ${radius} is ${area(radius)}`;
+newList = ["apple", "banana", "orange"];
+addToShop(newList);
